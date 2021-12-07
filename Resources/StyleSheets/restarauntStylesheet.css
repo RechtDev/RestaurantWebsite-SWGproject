@@ -1,3 +1,4 @@
+/*Removing margins and setting standardized fonts for all elements*/
 *{
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -8,6 +9,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
+/*setting rules for main layout of page*/
 h2 {
     margin-top: 60px;
 }
@@ -45,7 +47,7 @@ li a:hover {
 .container-header {
     align-self: center;
 }
-
+/*Spacing should be used to push any that comes after nav or after another container*/
 .space-85px {
     margin-top: 85px; 
 }
@@ -115,6 +117,7 @@ p.staff-description::before, p.staff-description::after{
 .textLabel-bold{
     font-weight: bolder;
 }
+/*Used for JS dont delete*/
 #showMore {
     display: none;
     transition: linear 5s;
@@ -122,7 +125,7 @@ p.staff-description::before, p.staff-description::after{
 .main-content-toggle-container{
     align-self: center;
 }
-
+/*Should be used for any element that is at the end of a container*/
 .btm-spacing-20px {
     margin-bottom: 20px;
 }
@@ -182,6 +185,7 @@ p.reviews-description::before, p.reviews-description::after {
     transition: ease-in-out .4s;
     color: #808080
 }
+/*Used for JS dont delete*/
 .hidden {
     display: none;
 }
@@ -207,8 +211,7 @@ p.reviews-description::before, p.reviews-description::after {
     overflow-y: auto;
     height:600px;
 }
-
-
+/*Responsiveness*/
 @media all and (max-width:600px) {
     p.reviews-description, .main-content-summary
     {

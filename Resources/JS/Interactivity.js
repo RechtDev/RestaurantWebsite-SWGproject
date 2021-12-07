@@ -1,16 +1,20 @@
 window.addEventListener("DOMContentLoaded", onDomLoaded);
 
 function onDomLoaded() {
+    //variables for Index.html Meet staff show/hide section
     let infoButton = document.getElementById("infoButton");
     let showMoreDiv = document.getElementById("showMore");
+    let isShown = false;
+    //variables for switxhing/showing wither review tab or food tab(food tab by defualt)
     let featuredFoodButton = document.getElementById("foodButton");
     let reviewsButton = document.getElementById("reviewsButton");
     let foodTab = document.getElementById("foodTab");
     let reviewsTab = document.getElementById("reviewsTab");
     let reviewTabShown = false;
-    let isShown = false;
+    //variables for underling the current page the user is on
     let navItems = document.querySelectorAll("li a");
     let currentLink = document.URL;
+    //function that assigns class that underlines current page in nav
     window.addEventListener("load", () => {
         if (currentLink.includes("Index")) {
             navItems[0].classList.toggle("activeNav");
@@ -23,7 +27,7 @@ function onDomLoaded() {
             navItems[2].classList.toggle("activeNav");
         }
     })
-
+    //function that shows/hides Meet the staff section on Index.html
     infoButton.addEventListener("click", () => {
         if (!isShown) {
             showMoreDiv.style.display = "inline-block";
@@ -36,6 +40,7 @@ function onDomLoaded() {
             isShown = false;
         }
     })
+    //functions that toggle the tabs 
     reviewsButton.addEventListener("click", () => {
         if (!reviewTabShown) {
             foodTab.classList.toggle("hidden");
@@ -50,6 +55,7 @@ function onDomLoaded() {
             reviewTabShown = false;
         }
     })
+    //button to open modal for Revies.html
     var exampleModal = document.getElementById('exampleModal')
     exampleModal.addEventListener('show.bs.modal', function (event) {
         // Button that triggered the modal
